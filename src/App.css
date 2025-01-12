@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020631;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app .mainHeading h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.app h1,
+h2 {
+  color: white;
+}
+
+.app .subHeading h2 {
+  font-size: 1.2em;
+  color: #b5b5b5;
+  margin-bottom: 1em;
+}
+
+.app .input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20em;
+  height: 2.5em;
+  background-color: white;
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app .input input {
+  width: 100%;
+  height: 1.6em;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+
+.app .input input:focus {
+  border: 2px solid #020631;
+}
+
+.app .input i {
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #020631;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.app .input i:hover {
+  color: #4e8dff;
+}
+
+.app .todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 25em;
+  margin-top: 1.5em;
+}
+
+.app .todos .todo {
+  width: 100%;
+  height: 2.5em;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 0.8em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.app .todos .todo:hover {
+  background-color: #f7f7f7;
+}
+
+.app .todos .todo .left {
+  display: flex;
+  align-items: center;
+}
+
+.app .todos .todo .left p {
+  font-size: 1em;
+  font-weight: 700;
+  color: #333;
+  margin-left: 10px;
+}
+
+.app .todos .todo .right {
+  display: flex;
+  align-items: center;
+}
+
+.app .todos .todo .right i {
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #ff3b3b;
+  transition: color 0.3s ease;
+  position: absolute;
+  right: 10px;
+}
+
+.app .todos .todo .right i:hover {
+  color: #e40000;
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1em;
+    top: 20%;
+  }
+
+  .app .input,
+  .app .todos .todo {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .app h1,
+  .app h2 {
+    font-size: 1.2em;
+  }
+}
